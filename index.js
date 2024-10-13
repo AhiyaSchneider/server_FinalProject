@@ -1,20 +1,18 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
-const uploadRoute = require('./routes/upload'); // Import the upload route
+const uploadRoute = require('./routes/upload');
 
 const app = express();
 
-// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
 app.use('/uploads', express.static('uploads'));
 
-// DB Config
 const db = require('./config/db').mongoURI;
 mongoose.connect(db)
-    .then(() => console.log('MongoDB connected'))
+    .then(() => console.log('MongoDB connected, updated '))
     .catch(err => console.log(err));
 
 // Use the upload route
