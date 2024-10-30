@@ -1,5 +1,8 @@
-﻿Worker ID,Name,Skills,Availability,Hourly Cost
-1,Alice,Nurse,Full-Time,20
-2,Bob,Doctor,Part-Time,15
-3,Charlie,Technician,Full-Time,4
-4,David,Nurse,Part-Time,6
+Worker ID,Worker Name,Skill,Available From,Available Until
+1,Alice,Doctor,08:00,12:00
+2,Bob,Nurse,08:00,12:00
+3,Charlie,Doctor,09:00,13:00
+4,David,Nurse,08:00,10:00
+5,Eve,Technician,10:00,14:00,
+6,Moshe,Technician,10:00,14:00
+
