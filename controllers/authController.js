@@ -26,7 +26,7 @@ async function login(req, res) {
             return res.status(401).json({ error: "Invalid username or password" });
         }
 
-        res.redirect('/upload'); 
+        res.status(201).json({ message: "User logged in successfully" });
     } catch (error) {
         res.status(500).json({ error: "Server error" });
     }
