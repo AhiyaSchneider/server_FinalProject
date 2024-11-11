@@ -17,7 +17,7 @@ function parseCSV(filePath) {
 
 function createOptimizedSchedule(demandData, costData, workersData) {
     let schedule = [];
-    let message = "Demand met successfully!"
+    let message = "Shift demand met successfully!"
 
     // Convert demandData into a more usable format with time intervals
     demandData = demandData.map(d => {
