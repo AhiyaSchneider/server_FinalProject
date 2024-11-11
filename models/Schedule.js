@@ -5,6 +5,7 @@ const scheduleSchema = new mongoose.Schema({
     startTime: String,
     endTime: String,
     skill: String,
+    message: String,
     workers: [{
         workerId: String,
         shift: {
