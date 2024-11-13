@@ -17,6 +17,7 @@ function parseCSV(filePath) {
 
 function createOptimizedSchedule(demandData, costData, workersData) {
     let schedule = [];
+    let message = "Shift demand met successfully!"
 
     // Convert demandData into a more usable format with time intervals
     demandData = demandData.map(d => {
@@ -72,6 +73,7 @@ function createOptimizedSchedule(demandData, costData, workersData) {
 
         // Step 5: Check if demand was met; if not, add a warning message
         if (requiredCount > 0) {
+            message = `Not enough workers to meet demand for ${demand.skill} on ${demand.date} (${demand.startTime}-${demand.endTime}). Short by ${requiredCount} worker(s).`;
             console.warn(`Not enough workers to meet demand for ${demand.skill} on ${demand.date} (${demand.startTime}-${demand.endTime}). Short by ${requiredCount} worker(s).`);
         }
 
@@ -81,6 +83,7 @@ function createOptimizedSchedule(demandData, costData, workersData) {
             startTime: demand.startTime,
             endTime: demand.endTime,
             skill: demand.skill,
+            message: message,
             workers: assignedWorkers
         });
     });
