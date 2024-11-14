@@ -74,7 +74,7 @@ function createOptimizedSchedule(demandData, costData, workersData) {
         // Step 5: Check if demand was met; if not, add a warning message
         if (requiredCount > 0) {
             message = `Not enough workers to meet demand for ${demand.skill} on ${demand.date} (${demand.startTime}-${demand.endTime}). Short by ${requiredCount} worker(s).`;
-            console.warn(`Not enough workers to meet demand for ${demand.skill} on ${demand.date} (${demand.startTime}-${demand.endTime}). Short by ${requiredCount} worker(s).`);
+            //console.warn(`Not enough workers to meet demand for ${demand.skill} on ${demand.date} (${demand.startTime}-${demand.endTime}). Short by ${requiredCount} worker(s).`);
         }
 
         // Step 6: Add the scheduled shift to the output schedule
